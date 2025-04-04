@@ -11,7 +11,7 @@ const packageDefinition = protoLoader.loadSync('calculator.proto', {
 });
 const calculatorProto = grpc.loadPackageDefinition(packageDefinition).calculator;
 
-// Create gRPC client
+
 const client = new calculatorProto.Calculator('13.218.165.32:50051', grpc.credentials.createInsecure());
 
 
